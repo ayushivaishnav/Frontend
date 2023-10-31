@@ -1,0 +1,36 @@
+<b>Enter user's data</b>
+<!-- Reactive forms makes use of a built-in class called as FormGroup
+     A FormGroup is a collection of form elements.
+     ngModel is not used in reactive forms
+-->
+<form [formGroup]="userForm" (ngSubmit)='addUser()' >
+First Name:<input type="text" name="firstName" formControlName="firstName"/><br/><br/>
+Last Name:<input type="text" name="lastName" formControlName="lastName"/><br/><br/>
+Join Date:<input type="date" name="joinDate" formControlName="joinDate"/><br/><br/>
+Salary:<input type="number" name="salary" formControlName="salary"/><br/><br/> 
+<input type="submit" value="Add User" [disabled]="!this.userForm.valid"/>&nbsp;&nbsp;
+<!-- <button (click)="Update()" [disabled]="!userForm.valid">Update</button> -->
+</form><br/><br/>
+<router-outlet></router-outlet>
+
+<table style="border: 3px; border-style: ridge;">
+  <tr style="border: 3px; border-style: ridge;">
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Join Date</th>
+    <th>Salary</th>
+    <th>Condition1</th>
+    <th>Condition2</th>
+  </tr>
+  <tr *ngFor="let user of userList; let i=index ">
+    <td>{{user.firstName}}</td>
+    <td>{{user.lastName}}</td>
+    <td>{{user.joinDate}}</td>
+    <td>{{user.salary}}</td>
+    <td><button (click)="Delete(i)">Delete</button></td>
+    <td><button (click)="Update()">Edit</button></td>
+  </tr>
+</table><br/><br/>
+ 
+  
+ 

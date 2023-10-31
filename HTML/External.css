@@ -1,0 +1,20 @@
+input [type="text"]
+{
+    color: darkred;
+    direction: rtl;
+    text-align: center;
+}
+input[type="email"]
+{
+    background-color: red;
+    cursor: progress;
+}
+input[type="number"]
+{
+    text-align: right;
+    text-shadow: 5px;
+}
+button[type="submit"]
+{
+    cursor: grabbing;
+}

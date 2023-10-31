@@ -1,0 +1,85 @@
+.ocean
+{
+    background-color: cadetblue;
+    width: 500px;
+    height: 400px;
+    font-family: 'Tahoma';
+    color: darkslategrey;
+}
+.forest
+{
+    background-color: green;
+    width: 500px;
+    height: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: crimson;
+}
+
+.cloud
+{
+    background-color:darkcyan ;
+    width: 500px;
+    height: 400px;
+    font-family: fantasy;
+    color: crimson;
+}
+
+
+.red
+{
+    background-color:red ;
+    width: 500px;
+    height: 400px;
+    font-family: fantasy;
+    color: rgb(84, 80, 80);
+}
+.blue
+{
+    background-color:blue ;
+    width: 500px;
+    height: 400px;
+    font-family: fantasy;
+    color: rgb(84, 80, 80);
+}
+.green
+{
+    background-color:green ;
+    width: 500px;
+    height: 400px;
+    font-family: fantasy;
+    color: rgb(84, 80, 80);
+}
+
+.orange
+{
+    background-color:orange ;
+    width: 500px;
+    height: 400px;
+    font-family: fantasy;
+    color: rgb(84, 80, 80);
+}
+.brown
+{
+    background-color:brown ;
+    width: 500px;
+    height: 400px;
+    font-family: fantasy;
+    color: rgb(84, 80, 80);  
+}
+.pink
+{
+    background-color:pink ;
+    width: 500px;
+    height: 400px;
+    font-family: fantasy;
+    color: rgb(84, 80, 80);
+}
+
+.black
+{
+    background-color:black ;
+    width: 500px;
+    height: 400px;
+    font-family: fantasy;
+    color: rgb(84, 80, 80);
+}

@@ -1,0 +1,31 @@
+.TableStyle
+{
+        border-collapse: separate; /* Use separate to have separate borders */
+        border-spacing: 0; /* Set the spacing between cells to 0 */
+        
+    }
+    
+    /* Style table header */
+    th {
+        background-color: #f2f2f2;
+        border: 2px solid #ccc; /* Add a border to table header cells */
+        padding: 10px;
+        text-align: left;
+    }
+    
+    /* Style table header and cells */
+    th, td {
+        border: 1px solid #ccc; /* Add a border to table cells */
+        padding: 10px;
+        text-align: left;
+    }
+    
+    /* Style alternate rows with different background color */
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    
+    /* Hover effect on rows */
+    tr:hover {
+        background-color: #ddd;
+    }

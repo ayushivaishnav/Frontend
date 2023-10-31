@@ -1,0 +1,31 @@
+<html>
+    <body>  
+        <div id="d1" style="color: red;">
+        </div>  
+    </body>
+
+    <script>
+        var age=prompt("Enter your age", 18);
+        try{
+        if (age>=18 && age<=60)
+        
+            document.writeln("you can apply for job..");
+        
+        else
+            throw "wait until 18";    
+    }
+        catch(e)
+        {
+            var divTag=document.getElementById("d1");
+            divTag.innerHTML=e;
+        }
+        finally{
+            document.writeln("<br><b>Now register for an email</b>");
+            window.open("http://mail.yahoo.com","_self");
+            //_self --> open link into same tab
+            //_blank or _target--> open into new tab.
+            //by default it will open in new tab.
+        }
+    </script>
+
+</html>

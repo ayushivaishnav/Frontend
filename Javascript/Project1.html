@@ -1,0 +1,49 @@
+<!-- Implement an associative array that contains the following--
+machine name as the key and it's IP address as the value.
+stores name of several machine and their respective IP address.
+
+Given the name of a machine, associative IP address must be printed.
+
+ -->
+
+<html>
+   <script>
+        var machine=[];
+        machine["Asus"]="100001";
+        machine["hp"]="200001";
+        machine["macbook"]="300001";
+        machine["acer"]="4000001";
+
+       function getname()
+       {
+           var modelname=document.forms[0].model.value;
+           var check=document.getElementById("x")
+           check.style.fontWeight="bold"
+           check.innerHTML=document.writeln("Ip iddress:"+machine[modelname]);
+       }
+       function displayIP(){
+        getname();
+       }
+   </script>
+   <form action="#" >
+    <label>Enter the model name:</label>
+   <input type="text" name="model" onblur="getname()">
+   <button type="button" onclick="displayIP()">Submit</button>&nbsp;&nbsp;
+   <label id="x"></label>
+</form>
+<!--
+    <p id="mn"></p>
+    <script>    
+const machine= [];
+machine[0] = "HP :"+"101.109.181.100",
+machine[1] = "Asus :" + "102.110.182.101",
+machine[2] = "Dell :" + "103.111.183.102", 
+machine[3] = "Mac :" + "104.112.184.103",
+machine[4] = "Acer :"+ "105.113.185.104",
+
+document.getElementById("mn").innerHTML =
+machine[0]+ "<br>" + machine[1] + "<br>"+machine[2] + "<br>"+machine[3] + "<br>"+ machine[4] ;
+    </script> -->
+    <body>
+    </body>
+</html>

@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <link rel ="stylesheet" href="External.css">
+        <center><h1><u>User Information</u></h1></center></head>
+        <script>
+            function checkName()
+            {
+                var name = document.forms[0].name.value;
+                if(name=="")
+                {
+                  //window.alert("Name is mandatory")
+                  var nerror=document.getElementById("nameerror");
+                  nerror.style.fontWeight="bold";
+                  nerror.style.fontStyle="italic";
+                  nerror.innerHTML="Name is mandatory";
+                 
+                }
+            }
+
+            function checkAge()
+            {
+                var Empage = document.forms[0].empage.value;
+                if(Empage=="")
+                {
+                  var nerror=document.getElementById("ageerror");
+                  nerror.style.fontWeight="bold";
+                  nerror.style.fontStyle="italic";
+                  nerror.innerHTML="Age is mandatory";
+                
+                }
+            }
+
+            function clearError()
+            {
+              document.getElementById("nameerror").innerHTML="";
+            }
+
+            function confirmReset()
+            {
+              var status=confirm("want to reset and loose the data?");
+              console.log(status);
+              return status;
+            }
+
+            function enableSave()
+            {
+              var v = document.getElementsByName("saveStatus");
+              var checkstate = v[0].checked;
+              document.getElementById("save").disabled =!v[0].checked;
+            }
+
+        </script>
+        <body>
+           <center> <form action="#" novalidate onreset="return confirmReset()">
+                    <lable>Employee ID</lable><br>
+                    <input type="text" name="employeeID" value="1248" readonly/><br><br>
+
+                    <label for="name"> Name : </label>   <br>
+                    <input type="text" placeholder="Enter Name" name="name" required maxlength="25" minlength="5" onblur="checkName()" 
+                    onfocus="clearError()"/> 
+                    <label id="nameerror" style="color: red;"></label><br><br> 
+                    
+                    <label > Age </label>  <br> 
+                    <input type="number" placeholder="Select Age" max="60" min="21" name="empage" style="width:170;" onblur="checkAge()"> 
+                    <label id="ageerror" style="color: red;"></label><br><br>
+
+                    <label>Volume Range</label><input type="range" min="10" max="100" 
+                    style="width:200;" onchange="updateVolume()"  name="Volume">
+
+                     <b name="VolumeLevel"></b>
+                     <input type="text" name="VolumeLevel" style="width: 60px;height:15px"readonly/><br><br>
+
+                     <label>Date of Joining</label>
+                     <input type="date" name="joindate" min="2020-03-01" max="2023-09-26"/><br><br>
+
+                     <label>Project Join Date</label>
+                     <input type="date" name="joindate" min="2020-03-01" max="2023-09-26"/><br><br>
+
+
+                     <label>Upload your Resume</label>
+                     <input type="file"  name="resume" accept="audio/mp3,video/mp4,application/pdf"><br><br>
+
+                     <label>Email ID</label>
+                     <input type="email" name="email" placeholder="Enter Email ID" minlength="6"><br><br>
+                     
+                     <input type="checkbox" name="saveStatus" onclick="enableSave()" />
+                     Agree to Terms & Conditions<br><br>
+                   <button type="submit" value="save" id="save" disabled>Save</button>&nbsp;&nbsp;
+                   <button type="reset">Reset</button> 
+
+               <script>
+                function updateVolume()
+                {
+                    document.forms[0].VolumeLevel.value=
+                    document.forms[0].Volume.value+"%";
+                }
+              </script> 
+
+              <!-- <script>
+                function updateVolume(){
+                    var volumeLevel=document.forms[0].elements['Volume'].value;
+                    document.getElementsByName('VolumeLevel')[0].innerHTML=volumeLevel+"%";
+                }
+              </script>
+                  -->
+            </form></center>
+        </body>
+</html>

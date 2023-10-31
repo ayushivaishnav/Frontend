@@ -1,0 +1,34 @@
+<b>Enter user's data</b>
+<!--Any template-driven form must use ngForm attribute(directive)  
+ userData becomes the object that acts as model.
+ userData is automatically created by angular.
+ It will have fiels like firstName, lastName, joinDate, salary.
+ This line <form #userData="NgForm" represented as-> var userData=new NgForm();
+-->
+<form #userData="ngForm" (ngSubmit)='addUser(userData)' >
+User Id:<input type="text" name="userid" ngModel/><br/><br/>
+Password:<input type="password" name="password" ngModel/><br/><br/>
+Email Id:<input type="email" name="emailid" ngModel/><br/><br/>
+
+<input type="submit" value="Add user" />&nbsp;&nbsp;
+<input type="button" value="Get user" (click)="getAllUser()"/>
+<input type="button" value="Update" (click)="updateUser(userData)"/>
+<input type="button" value="Delete" (click)="deleteUser(userData)"/>
+</form><br/><br/>
+
+<label>{{this.exresponse}}</label><br/><br/>
+<router-outlet></router-outlet>
+
+<table style="border: 3px; border-style: ridge;">
+  <tr style="border: 3px; border-style: ridge;">
+    <th>User Id</th><br/>
+    <th>Password</th><br/>
+    <th>Email Id</th><br/>
+
+  </tr>
+  <tr *ngFor="let user of userList">
+    <td>{{user.userid}}</td><br/>
+    <td>{{user.password}}</td><br/>
+    <td>{{user.emailid}}</td><br/>  
+  </tr>
+</table><br/><br/>

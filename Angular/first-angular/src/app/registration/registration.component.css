@@ -1,0 +1,8 @@
+div
+{
+    width: 25%;
+    background-color: wheat;
+    border: 30px;
+    border-width: 10px;
+    border-style:ridge;
+}

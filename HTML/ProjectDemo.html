@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <center>
+        <h1><u>USER DETAILS</u></h1>
+</head>
+<body>
+</center>
+<table border="5px" style=" border:5px; border-style: groove; border-color:burlywood;  border-radius:4px;"
+    align="center" width="500px" height="300px">
+    <form action="#">
+        <tr>
+            <td>
+                <lable>First Name</lable><br>
+            </td>
+            <td>
+                <input type="text" placeholder="Enter First Name" name="fname" required maxlength="25"
+                    minlength="5" /><br><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="name"> Last Name : </label><br>
+            </td>
+            <td>
+                <input type="text" placeholder="Enter Last Name" name="lname" required maxlength="25" minlength="5">
+                <br><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label> Address: </label><br>
+            </td>
+            <td>
+                <input type="text" placeholder="Enter Address" name="address"> <br><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label> Mobile: </label><br>
+            </td>
+            <td>
+                <input type="number" placeholder="Enter Mobile Number" name="mobile"> <br><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Email ID:</label><br>
+            </td>
+            <td>
+                <input type="email" name="email" placeholder="Enter Email ID" minlength="6"><br><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" onclick="saveData()" value="Add" />&nbsp;&nbsp;
+
+            
+            </td>
+            <td>
+                <input type="button" onclick="extractData()" value="Get" />&nbsp;&nbsp;
+            </td>
+        </tr>
+    </form>
+</table>
+<pre id="displayData"></pre>
+<script>
+    function saveData()
+                {
+                    var v=document.forms[0].fname.value;
+                    var a=document.forms[0].lname.value;
+                    var b=document.forms[0].address.value;
+                    var c=document.forms[0].mobile.value;
+                    var d=document.forms[0].email.value;
+                    console.log(v + "\t\t" + a + "\t\t" + b + "\t\t"+ c + "\t\t"+d);
+                    sessionStorage.fname=v;
+                    sessionStorage.lname=a;
+                    sessionStorage.address=b;
+                    sessionStorage.mobile=c;
+                    sessionStorage.email=d;
+                    
+                }
+    function extractData() {
+        var v = sessionStorage.fname;
+        var a = sessionStorage.lname;
+        var b = sessionStorage.address;
+        var c = sessionStorage.mobile;
+        var d = sessionStorage.email;
+        var displayData = document.getElementById('displayData');
+        displayData.innerHTML = `
+               <p>First Name: ${v}</p>
+               <p>Last Name: ${a}</p>
+               <p>Address: ${b}</p>
+               <p>Mobile Number: ${c}</p>
+               <p>Email: ${d}</p> `;
+
+    }
+</script>
+</body>
+</html>

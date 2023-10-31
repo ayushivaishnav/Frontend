@@ -1,0 +1,30 @@
+<html>
+    <head><center><h1><u>User Information</u></h1></center></head>
+        <body>
+           <center> <form action="#" >
+                    <lable>Employee ID</lable><br>
+                    <input type="text" name="employeeID" value="1248" readonly/><br><br>
+
+                    <label> Name : </label>   <br>
+                    <input type="text" placeholder="Enter Name" name="name" required maxlength="25" minlength="5"> <br><br> 
+                    
+                    <label > Age: </label><br> 
+                    <input type="number" placeholder="Select Age" max="60" min="21" name="empage" style="width:170;"> <br><br>
+
+                   <button type="submit" onclick="SaveData()">Save</button>&nbsp;&nbsp;
+                   <button type="reset">Reset</button> 
+            </form></center>
+            <script>
+                function SaveData()
+                {
+                    var v=document.forms[0].employeeID.value;
+                    var a=document.forms[0].name.value;
+                    var b=document.forms[0].empage.value;
+                    console.log(v + "\t\t" + a + "\t\t" + b);
+                    sessionStorage.employeeID=v;
+                    sessionStorage.name=a;
+                    sessionStorage.empage=b;
+                }
+            </script>
+        </body>
+</html>

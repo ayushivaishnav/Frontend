@@ -1,0 +1,43 @@
+<html>
+    <head></head>
+    <body>
+        <center> <form action="#" >
+            <lable>Employee ID</lable><br>
+            <input type="text" name="employeeID" value="1248" readonly/><br><br>
+
+            <label> Name : </label>   <br>
+            <input type="text" placeholder="Enter Name" name="name" required maxlength="25" minlength="5"> <br><br> 
+            
+            <label > Age: </label><br> 
+            <input type="number" placeholder="Select Age" max="60" min="21" name="empage" style="width:170;"> <br><br>
+
+            <fieldset>
+                Select Gender<br>
+            <input type="radio" name="Gender" value="F"/>Male
+            <input type="radio" name="Gender" value="F"/>Female<br><br>
+            </fieldset>
+
+            Hobbies<br>
+            <fieldset>
+                <input type="checkbox" name="hobbies" value="Cricket"/>Cricket
+                <input type="checkbox" name="hobbies" value="Music"/>Music
+                <input type="checkbox" name="hobbies" value="Football"/>Football<br><br>
+            </fieldset>
+
+           <button type="submit" onclick="SaveData()">Save</button>&nbsp;&nbsp;
+           <button type="reset">Reset</button> 
+        </form></center>
+            <script>
+                function SaveData()
+                {
+                    var v=document.forms[0].employeeID.value;
+                    var a=document.forms[0].name.value;
+                    var b=document.forms[0].empage.value;
+                    console.log(v + "\t\t" + a + "\t\t" + b);
+                    localStorage.employeeID=v;
+                    localStorage.name=a;
+                    localStorage.empage=b;
+                }
+            </script>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+    <head>
+         <style>
+            /* img
+           {
+            max-width:100%;
+            height: auto;
+            display: block;
+            margin:0 auto;
+           }   */
+            @media only screen and(max-width:300px){
+            img
+            {
+             width: 90%;
+            }
+           }
+           @media only screen and (max-width:500px){
+            img{width:95% }
+           }
+           @media only screen and(max-width:700px) {
+            img{width:80%}
+            
+           } 
+
+        </style> 
+    </head>
+    <body>
+        <img src="Chandrayaan.jpg" ><br>
+        <center> <form action="#" >
+    
+            <lable>Employee ID</lable><br>
+            <input type="text" name="employeeID" value="1248" readonly/><br><br>
+
+            <label> Name : </label>   <br>
+            <input type="text" placeholder="Enter Name" name="name" required maxlength="25" minlength="5"> <br><br> 
+            
+            <label > Age: </label><br> 
+            <input type="number" placeholder="Select Age" max="60" min="21" name="empage" style="width:170;"> <br><br>
+            
+            <fieldset>
+                Select Gender<br>
+            <input type="radio" name="Gender" value="F"/>Male
+            <input type="radio" name="Gender" value="F"/>Female<br><br>
+            </fieldset>
+
+            Hobbies<br>
+            <fieldset>
+                <input type="checkbox" name="hobbies" value="Cricket"/>Cricket
+                <input type="checkbox" name="hobbies" value="Music"/>Music
+                <input type="checkbox" name="hobbies" value="Football"/>Football<br><br>
+            </fieldset>
+
+           <button type="submit" onclick="SaveData()">Save</button>&nbsp;&nbsp;
+           <button type="reset">Reset</button> 
+        </form></center>
+        </body>
+        </html>

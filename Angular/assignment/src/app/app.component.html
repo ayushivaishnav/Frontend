@@ -1,0 +1,16 @@
+<b>Select themes:</b>
+<select size="1" [(ngModel)]="themeName">
+<option value="forest">Forest Theme</option>
+<option value="ocean">Ocean Theme</option>
+<option value="cloud">Cloud Theme</option>
+</select><br/><br/>
+
+<!--Style binding-->
+<div [class]="themeName" >
+</div>
+<div class="loginform"><br/>
+First Name <input type="text" [(ngModel)]="firstName" /><br/><br/>
+Last Name <input type="text" [(ngModel)]="lastName" /><br/><br
+<input type="checkbox"/>Agree to T & C<br/><br/>
+<input type="button" value="Save Data" />
+</div>

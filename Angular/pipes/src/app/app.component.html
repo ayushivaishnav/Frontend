@@ -1,0 +1,30 @@
+<!-- string pipe  -->
+<!-- Uppercase/lowercase pipe -->
+First Name: {{this.Udata.firstName | uppercase}}<br/>
+Last Name: {{this.Udata.lastName | uppercase}}<br/>
+{{this.Udata.firstName+ ' ' +this.Udata.lastName }}<br/>
+First Name: {{this.Udata.firstName | lowercase}}<br/>
+Last Name: {{this.Udata.lastName | lowercase}}<br/>
+
+<!-- slice pipe -->
+Name:&nbsp; {{this.Udata.firstName + this.Udata.lastName | slice:4 }}<br/>
+ Name:&nbsp; {{this.Udata.firstName + this.Udata.lastName | slice:4:15 }}<br/>
+
+ <!-- Date pipe -->
+ Join Date:&nbsp;{{this.Udata.dateOfJoining | date}}<br/>
+ Full Date: &nbsp;{{this.Udata.dateOfJoining| date: 'fullDate'}}<br/>
+ Short Date: &nbsp;{{this.Udata.dateOfJoining| date: 'shortDate'}}<br/>
+ Full Time: &nbsp;{{this.Udata.dateOfJoining| date: 'fullTime'}}<br/>
+ Short Time: &nbsp;{{this.Udata.dateOfJoining| date: 'shortTime'}}<br/>
+ Date format: &nbsp;{{this.Udata.dateOfJoining| date: 'medium'}}<br/>
+ Date format: &nbsp;{{this.Udata.dateOfJoining| date: 'dd-M-yy'}}<br/>
+ Full Date format: &nbsp;{{this.Udata.dateOfJoining| date: 'dd-M-yyyy'}}<br/>
+ Time format: &nbsp;{{this.Udata.dateOfJoining| date: 'h:m:ss a z'}}<br/>
+
+ <!-- Currency pipe -->
+ Default Currency: &nbsp; {{this.Udata.salary | currency}}<br/>
+ INR Currency: &nbsp; {{this.Udata.salary | currency:'INR'}}<br/>
+ Euro Currency: &nbsp; {{this.Udata.salary | currency:'EUR'}}<br/>
+ GBP Currency: &nbsp; {{this.Udata.salary | currency:'GBP'}}<br/>
+
+<router-outlet></router-outlet>
